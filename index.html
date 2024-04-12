@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="author" content="Ortalyarts" />
+  <meta
+    name="description"
+    content="Crowdfunding product page"
+  />
+  <meta
+    name="keywords"
+    content="Monitor Riser, Ortaly, OrtalyARTS, Crwodfunding"
+  />
+  <meta
+    property="og:title"
+    content="Frontend Mentor | Crowdfunding product page"
+  />
+  <meta
+    property="og:description"
+    content="Frontend Mentor | Crowdfunding product page | OrtalyARTS"
+  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Crowdfunding product page</title>
+
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="row-container top-bar">
+      <a href="#h1" class="skip-nav-link">Skip to main content</a>
+      <div class="logo">        
+        <img src="./images/logo.svg"  alt="Snap logo" width=128.33 height="20"/>
+      </div>
+      <nav id="top-nav">
+        <button type="button" id="menu-icon" aria-haspopup="true" aria-expanded="false" aria-label="Open menu"></button>
+        <div id="top-nav-container" >
+          
+          <ul id="nav-ul">            
+            <li><a href="#" >About</a></li>
+            <li><a href="#" >Discover</a></li>
+            <li><a href="#">Get Started</a></li>
+          </ul>       
+        </div>     
+      </nav>
+    </div>
+
+    <main>
+      <section class="row-with-background bodyM hero" aria-labelledby="h1">
+        <img class="project-logo" src="./images/logo-mastercraft.svg" width="56" height="56" alt="" />
+        <h1 id="h1">Mastercraft Bamboo Monitor Riser</h1>
+        <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
+        <div class="two-collumns">
+          <button id="back-project" class="btn big-btn" aria-haspopup="true" aria-expanded="false" onclick="openDialog('backThisProject')">Back this project</button>
+          <label class="switch-container" for="bookmark-toggle-button">
+            <input name="bookmark-toggle-button" id="bookmark-toggle-button" type="checkbox" class="bookmark-toggle-button">            
+            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle id="svg-circle" cx="28" cy="28" r="28"/><path id="svg-path" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>
+            <span>Bookmark</span>
+          </label>
+        </div>        
+      </section>
+
+      <section aria-label="Achievements" class="row-with-background bodyM">
+        <div class="colomns-3">
+          <div>
+            <h2><span class="sum">$</span><span class="sum" id="backed">89,914</span>
+              <span class="ofTotal">of $100,000 backed</span>
+            </h2>
+          </div>
+          <div>
+            <h2><span class="sum" id="backes">5,007</span>
+              <span class="ofTotal">total backers</span>
+            </h2>
+          </div>
+          <div>
+            <h2><span class="sum">56</span>
+              <span class="ofTotal">days left</span>
+            </h2>
+          </div>
+        </div>
+        <div class="progress-bar-holder">
+          <div id="progress-bar" class="progress-bar" style="width:89.914%">
+            <div class="progress-bar-animation"></div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="about" class="row-with-background bodyM">
+        <h2 id="about">About this project</h2>
+        <div class="intro-desc">
+          <p>
+            The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
+            to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
+            your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
+          </p>
+          <p>
+          Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
+          to allow notepads, pens, and USB sticks to be stored under the stand.
+          </p>
+        </div>
+
+        <div id="cards-holder"></div>
+      </section>
+    </main>
+
+  </div> <!-- main-container end -->
+
+  <!-- Selection "back this project" modal start -->
+  <dialog id="backThisProject" class="dialog" aria-modal="true" aria-labelledby="dialog-back-project-title" aria-describedby="dialog-back-project-desc">
+    <div class="row-with-background bodyM">
+      <button id="close-dialog" class="close-dialog" aria-label="Close dialog window"><svg aria-hidden="true" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z" fill-rule="evenodd" /></svg></button>
+      <h2 id="dialog-back-project-title" tabindex="-1">Back this project</h2>
+      <p id="dialog-back-project-desc">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world? </p>
+      <div id="accordion-holder"></div>
+      
+    </div>
+  </dialog>
+
+    <!-- Selection "Thank you" modal start -->
+    <dialog id="thankYou" class="dialog" aria-modal="true" aria-labelledby="dialog-thank-you-title" aria-describedby="dialog-thank-you-desc">
+      <div class="row-with-background bodyM">
+        <svg aria-hidden="true" width="64" height="64" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#3CB3AB" cx="32" cy="32" r="32"/><path stroke="#FFF" stroke-width="5" d="M20 31.86L28.093 40 44 24"/></g></svg>
+        <h2 id="dialog-thank-you-title" tabindex="-1">Thanks for your support!</h2>
+        <p id="dialog-thank-you-desc">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
+        <button class="btn" id="btn-thank-you">Got it!</button>
+      </div>
+    </dialog>
+
+  <script src="main.js"></script>
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.ortaly.com/" target="_blank">OrtalyARTS</a>.
+  </footer>
+</body>
+</html>
