@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/ortalyarts/frontendmentor-interactive-card-details-form
-- Live Site URL: https://frontendmentor-interactive-card-details-form.vercel.app/
+- Solution URL: https://github.com/ortalyarts/frontendmentor-crowdfunding-product-page
+- Live Site URL: https://frontendmentor-crowdfunding-product-page-green.vercel.app/
 
 ## My process
 

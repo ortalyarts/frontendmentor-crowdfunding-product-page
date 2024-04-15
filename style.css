@@ -45,6 +45,7 @@ img {
     --color5: rgb(242, 242, 242);
     --color6: rgb(122, 122, 122, 0.15);
     --color7: rgb(151, 151, 151);
+    --color8: rgb(251 251 251);
 
     --ffparagraph: "Commissioner", system-ui, sans-serif;
     --fsparagraph: 1rem;
@@ -62,8 +63,11 @@ body {
     font-family: var(--ffparagraph);
     text-rendering: optimizeSpeed;
     text-align:left; 
-    background: var(--color5) url(./images/image-hero-mobile.jpg) no-repeat center top;
-    background-size: 100vw auto;
+    background-color: var(--color8);
+    background-image: url(./images/gradient.png), url(./images/image-hero-mobile.jpg);
+    background-repeat: repeat-x, no-repeat;
+    background-position: center top, center top;
+    background-size: 100% 8rem, 100vw auto;;
     min-height: 100vh;  
 }
 h1, h2, h3, ul {
@@ -100,7 +104,6 @@ h1, h2, h3, ul {
   transition: 1s; 
   border:2px solid white;
 }
-
 .main-container{
   margin:auto;
   overflow-x: hidden;
@@ -751,8 +754,11 @@ footer, footer a { font-size: 11px; text-align: center; color: var(--color2);}
 @media screen and (min-width:60rem) {
   body {
     padding:0 2rem; 
-    background: var(--color5) url(./images/image-hero-desktop.jpg) no-repeat top;
-    background-size: contain;
+    background-color: var(--color8);
+    background-image: url(./images/gradient.png), url(./images/image-hero-desktop.jpg);
+    background-repeat: repeat-x, no-repeat;
+    background-position: center top, center top;
+    background-size: 100% 8rem, contain;
   }
   .row-container {
     max-width:69.313rem;
